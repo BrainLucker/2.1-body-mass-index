@@ -27,14 +27,14 @@ public class InputValue {
                     valueCheck = false; // Выход из цикла
                 }
             } else {
-                System.out.println("Пожалуйста, введите целое цисло.");
+                System.out.println("Пожалуйста, введите целое число.");
                 console.next();
             }
         }
         return value;
     }
 
-    public void end() { // Закрытие сканнера
+    public void end() { // Закрытие сканера
         console.close();
     }
 }
