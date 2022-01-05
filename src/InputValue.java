@@ -2,11 +2,9 @@ import java.util.Scanner;
 
 public class InputValue {
     Scanner console = new Scanner(System.in);
-    public int keyboard (String parameter) {
-        int value = 0;
-        boolean valueCheck = true;
+    public int keyboard(String parameter) {
         String msg;
-        switch (parameter) {
+        switch (parameter) { // Подготовка сообщения для запроса данных
             case "weight":
                 msg = "Введите ваш вес в килограммах: ";
                 break;
@@ -17,14 +15,16 @@ public class InputValue {
                 msg = "Что-то пошло не так.";
                 break;
         }
+        int value = 0;
+        boolean valueCheck = true;
         while (valueCheck) {
             System.out.print(msg);
-            if (console.hasNextInt()) {
+            if (console.hasNextInt()) { // Проверка на ввод целого числа
                 value = console.nextInt();
-                if (value < 1 || value > 300) {
+                if (value < 1 || value > 300) { // Проверка на ввод валидного значения
                     System.out.println("Недопустимое значение, попробуйте снова.");
                 } else {
-                    valueCheck = false;
+                    valueCheck = false; // Выход из цикла
                 }
             } else {
                 System.out.println("Пожалуйста, введите целое цисло.");
@@ -33,7 +33,8 @@ public class InputValue {
         }
         return value;
     }
-    public void end () {
+
+    public void end() { // Зыкрытие сканнера
         console.close();
     }
 }

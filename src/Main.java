@@ -8,6 +8,6 @@ public class Main {
         // Подсчет и вывод индекса массы тела
         BmiService service = new BmiService();
         float index = service.calculate(weight, height);
-        System.out.println("Ваш индекс массы тела равен : " + index);
+        System.out.println("Ваш индекс массы тела равен: " + index);
     }
 }
