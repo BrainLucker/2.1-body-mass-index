@@ -34,7 +34,7 @@ public class InputValue {
         return value;
     }
 
-    public void end() { // Зыкрытие сканнера
+    public void end() { // Закрытие сканнера
         console.close();
     }
 }
